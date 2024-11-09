@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    for(int a = 0; a <= 4; a += 1)
+    for(int a = 1; a <= 5; a += 1)
     {
        for (int j = 1; j <= 5; j += 1)
        {
