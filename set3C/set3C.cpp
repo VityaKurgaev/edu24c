@@ -1,14 +1,28 @@
+/*
+Set 3C
+student - Vitya Kurgaev
+15112024
+*/
 #include <iostream>
 using namespace std;
 
+int a[5] = {};
+
 int main()
-{
-    const int n = 4;
-    int numbers[n] = {11, 12, 13, 14};
-    for (int i = 0; i < n; i++)
+{ 
+    for (int i = 0; i < 5; i++)
     {
-        cout << numbers[i] << endl;
+        cin >> a[i];
+
     }
+    cout << endl;
+    int j = 0;
+    while (j < 5)
+    {
+      cout << a[j]  << "";
+      j++;
+    }
+
 
     return 0;
 }
