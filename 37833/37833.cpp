@@ -29,11 +29,11 @@ int main()
     //3
     for (int j = 0; j < c; j++)
     {
-        if (a[j] % 4 == 0)
+        if (a[j] % 3 == 0)
         {
             if (a[j] > maxx)
             {
-               maxx++;
+               maxx = a[j];
             }
         }
     }
