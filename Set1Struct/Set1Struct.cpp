@@ -19,6 +19,15 @@ student newStudent [] =
     {"ivan", 1, 3} 
 };
 
+int arr[5] = {4, 4, 5, 4, 3};
+
+
+
+for (int i = 0; i < 5; i++)
+{
+    if arr[i] > arr[i + 1]
+}
+
 
 void total_score()
 {
