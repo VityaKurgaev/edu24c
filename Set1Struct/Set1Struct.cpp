@@ -1,87 +1,69 @@
 #include <iostream>
 using namespace std;
-int result;
 
-
-
-struct student
+struct Student
 {
     string name;
     int groupNumber;
-    int averageGrade;
-
+    double averageGrade;
 };
 
-student Student [] = 
-{ 
-    {"Misha", 7, 4}, 
-    {"Vasy", 12, 4}, 
-    {"Nikita", 2, 5}, 
-    {"Andrey", 3, 4}, 
-    {"ivan", 1, 3} 
-};
-
-void printnStudetSet1(Student *s)
+Student MGU[] = 
 {
-    for(int i = 0; i < 5; ++i)
-    {
-        cout << s[i].name << endl;
-        cout << s[i].groupNumber << endl;
-        cout << s[i].averageGrade << endl;
-    }
-}
+    {"Ivan", 104,     3.8},
+    {"Jenia", 104,    4.2},
+    {"Viktoria", 101, 4.0},
+    {"Vitia", 101,    4.7},
+    {"Matvey", 104,   4.8}
+};
 
-void printnStudentsSet2(Student *s)
-{   
-    for (int i = 0; i < 3; ++i)
+void averageGradeAll()
+{
+    double result{};
+    for (int i = 0; i < 5; i++)
     {
-        cout << s[i].name << endl;
-        cout << s[i].groupNumber << endl;
-        cout << s[i].averageGrade << endl;
+        result = result + MGU[i].averageGrade;
     }
 
-    double arr[3] = {};
-    for (int j = 0; j < 3; j++)
+    cout << result << endl;
+    cout << "result: " << (result / 5.0) << endl;
+
+    double arr[5];
+
+    for (int j = 0; j < 5; j++)
     {
-        arr[j] = s[j].averageGrade;
+        arr[j] = MGU[j].averageGrade;
     }
+
+    for(int l = 0; l < 5; l++)
+    {
+        cout << arr[l] << " ";
+    }
+
+    cout << endl;
 
     double buffer{};
-    for (int k = 0; k < 3; k++)
+    for (int y = 0; y < 5; y++)
     {
-        for (int kk = 0; kk < 3; kk++)
+        for (int k = 0; k < 5; k++)
         {
-            if (arr[kk] < arr[kk + 1])
+            if (arr[k] < arr[k + 1])
             {
-                buffer = arr[kk];
-                arr[kk] = arr[kk + 1];
-                arr[kk + 1] = buffer;
+                buffer = arr[k];
+                arr[k] = arr[k + 1];
+                arr[k + 1] = buffer;
             }
         }
     }
 
-    for (int l = 0; l < 3; l++)
+    for(int l = 0; l > 5; l++)
     {
         cout << arr[l] << " ";
     }
 }
 
-
-
-void total_score()
-{
-    for (int j = 0; j < 5; j++)
-    {
-        result = result + Student[j].averageGrade;
-
-    }
-
-    cout << result/5 << endl;
-}
-
 int main()
 {
-    printnStudetnSet2(Student);
-    total_score();
+    averageGradeAll();
     return 0;
 }
