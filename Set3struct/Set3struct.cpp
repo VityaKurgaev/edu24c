@@ -19,7 +19,7 @@ Student allStudentMGY[]
 
 };
 
-void studentSearch()
+void studentSearch(Student& stLocal, int s)
 {
     while(1)
     {
@@ -28,7 +28,7 @@ void studentSearch()
 
         cin >> textUser;
 
-        for (Student st : allStudentMGY)
+        for (Student st : stLocal.)
         {
            if (cout << st.fullName.compare(textUser) == 0)
            {
@@ -43,6 +43,6 @@ void studentSearch()
 
 int main()
 {
-    studentSearch();
+    studentSearch(allStudentMGY);
     return 0;
 }
